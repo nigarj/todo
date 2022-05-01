@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>♥️ TO DO ♥️</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="yellow-block">
+        </div>
+        <div class="main-block">
+            <h2>To Do List</h2>
+
+            <div class="sorting">
+                <button class="sort" type="button"></button>
+            </div>
+            <div class="search"><input id="search" onkeyup="filter()" type="text" placeholder="Search"></div>
+            <form id="addForm">
+                <div class="groupnew">
+                    <div class="group">
+                        <input id="inputid" type="text" placeholder="Add to do" />
+                        <div>
+                            <ul id="ulid">
+
+                            </ul>
+
+                        </div>
+                    </div>
+            </form>
+            <button id="add" type="submit">
+                <span>
+                    +
+                </span>
+                Add
+            </button>
+
+
+        </div>
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
