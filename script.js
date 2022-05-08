@@ -95,17 +95,9 @@ function removeArrayElements() {
 }
 
 function sortHandlerAscending() {
-    arr.sort((a, b) => {
-        if (a < b) {
-            return -1;
-        }
-        if (a > b) {
-            return 1;
-        }
-        if (a === b) {
-            return 0;
-        }
-    })
+
+
+    arr.sort((a, b) => a.localeCompare(b, navigator.languages[0] || navigator.language, {numeric: true, ignorePunctuation: true}))
 
     addArrayElements()
 
@@ -126,17 +118,8 @@ function addArrayElements() {
 }
 
 function sortHandlerDescending() {
-    arr.sort((a, b) => {
-        if (a > b) {
-            return -1;
-        }
-        if (a < b) {
-            return 1;
-        }
-        if (a === b) {
-            return 0;
-        }
-    })
+
+    arr.sort((a, b) => b.localeCompare(a, navigator.languages[0] || navigator.language, {numeric: true, ignorePunctuation: true}))
 
     addArrayElements();
 }
